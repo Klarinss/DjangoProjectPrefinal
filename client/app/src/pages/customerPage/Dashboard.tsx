@@ -16,7 +16,7 @@ import Binibanner from '../../../public/biniBanner/viber_image_2025-04-30_10-29-
 export default function Dashboard() {
     const navigate = useNavigate();
     const [backGround, setBackGround] = useState(false)
-    
+
     const SocmedLinks = [
         {
             id: 1,
@@ -58,16 +58,17 @@ export default function Dashboard() {
 
     return (
         <div className='w-screen h-auto relative '>
-            <div className='fixed top-0 left-0 w-full h-full inset-0 -z-50'>
-                <video
-                    className='w-full h-full object-cover'
-                    src={blinkVid}
-                    muted
-                    autoPlay
-                    loop
-                    playsInline
-                />
-            </div>
+            {/* Video background section */}
+{/* <div className='fixed top-0 left-0 w-full h-full inset-0 -z-50'>
+    <video
+        className='w-full h-full object-cover'
+        src={blinkVid}
+        muted
+        autoPlay
+        loop
+        playsInline
+    />
+</div> */}
             <div className={`fixed top-0 left-0 right-0 z-50 h-20 transition-all duration-300 `}>
                 <div className={`sticky  flex flex-row items-center justify-between  h-20 ${backGround && ' transition-all duration-300 ease-in-out bg-header'}`}>
                     <div className='ml-10 z-10'>
@@ -120,16 +121,13 @@ export default function Dashboard() {
                                 <Card></Card>
                                 <div className='pt-30 w-180 flex flex-col justify-center items-center'>
                                     <div >
-                                        <img className='rounded-2xl h-full w-full object-cover cursor-pointer'  src={Binibanner} alt="" />
+                                        <img className='rounded-2xl h-full w-full object-cover cursor-pointer' src={Binibanner} alt="" />
                                     </div>
                                     <button className='mt-10 bg-header text-white' type='submit'>Shop now </button>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
