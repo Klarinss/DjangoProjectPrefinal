@@ -16,7 +16,7 @@ import Binibanner from '../../../public/biniBanner/viber_image_2025-04-30_10-29-
 export default function HomeScreen() {
     const navigate = useNavigate();
     const [backGround, setBackGround] = useState(false)
-    
+
     const SocmedLinks = [
         {
             id: 1,
@@ -58,7 +58,7 @@ export default function HomeScreen() {
 
     return (
         <div className='w-screen h-auto relative '>
-           
+
             <div className={`fixed top-0 left-0 right-0 z-50 h-20 transition-all duration-300 `}>
                 <div className={`sticky  flex flex-row items-center justify-between  h-20 ${backGround && ' transition-all duration-300 ease-in-out bg-header'}`}>
                     <div className='ml-10 z-10'>
@@ -70,7 +70,7 @@ export default function HomeScreen() {
                             <li className='hover:text-hoverColor transition duration-150 ease-in-out'>Music</li>
                             <li className='hover:text-hoverColor transition duration-150 ease-in-out'>Videos</li>
                             <li className='hover:text-hoverColor transition duration-150 ease-in-out'>Gallery</li>
-                            <li className='hover:text-hoverColor transition duration-150 ease-in-out' onClick={()=>navigate('/login')}>Shop</li>
+                            <li className='hover:text-hoverColor transition duration-150 ease-in-out' onClick={() => navigate('/login')}>Shop</li>
                             <li className='hover:text-hoverColor transition duration-150 ease-in-out'>Events</li>
                             <li className='hover:text-hoverColor transition duration-150 ease-in-out'>Articles</li>
                             <li className='hover:text-hoverColor transition duration-150 ease-in-out'>Subscribe</li>
@@ -111,7 +111,7 @@ export default function HomeScreen() {
                                 <Card></Card>
                                 <div className='pt-30 w-180 flex flex-col justify-center items-center'>
                                     <div >
-                                        <img className='rounded-2xl h-full w-full object-cover cursor-pointer' onClick={()=> navigate('/login')} src={Binibanner} alt="" />
+                                        <img className='rounded-2xl h-full w-full object-cover cursor-pointer' onClick={() => navigate('/login')} src={Binibanner} alt="" />
                                     </div>
                                     <button className='mt-10 bg-header text-white' type='submit' onClick={() => navigate('/login')}>Shop now </button>
                                 </div>
