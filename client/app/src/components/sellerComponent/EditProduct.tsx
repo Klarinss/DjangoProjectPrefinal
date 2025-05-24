@@ -63,7 +63,7 @@ export default function EditProductModal({ modalActive, onChange,product,onEdit 
         <>
             <div className="flex  rounded-2xl items-center bg-white text-textColor pt-5 pb-10 w-2xl flex-col ">
                 <div className=" pr-5 flex justify-between w-full pb-10 pl-5">
-                  <h2 className="text-header font-medium text-4xl">Edit Product </h2>
+                  <h2 className=" font-medium text-4xl text-ModalColor flex justify-center items-center pl-50">Edit Product </h2>
                     <IoClose className="text-4xl cursor-pointer" onClick={onChange} />
                 </div>
                 <div className="h-full w-full" >
@@ -94,7 +94,7 @@ export default function EditProductModal({ modalActive, onChange,product,onEdit 
                                             />
                                         </div>
                                     ) : (
-                                        <div className="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center w-48">
+                                        <div className="border-2 border-l-inherit border-gray-300 rounded-lg p-4 text-center w-48">
                                             <input
                                                 type="file"
                                                 onChange={handleImageChange}
@@ -109,7 +109,7 @@ export default function EditProductModal({ modalActive, onChange,product,onEdit 
                                             >
                                                 <div className="flex flex-col items-center gap-2">
                                                     <span className="text-3xl">+</span>
-                                                    <span>Upload Image</span>
+                                                    <span>Butang Image</span>
                                                 </div>
                                             </label>
                                         </div>
@@ -120,7 +120,7 @@ export default function EditProductModal({ modalActive, onChange,product,onEdit 
 
 
                         </div>
-                       <div className="flex  justify-between  pt-5 pb-5">
+                       <div className="flex  justify-evenly  pt-5 pb-5">
                          <label className="flex flex-col">
                             Product Name
                             <input type="text" placeholder="Enter Product Name" className="p-3 border-BoldColor border rounded-lg focus-within:outline-2 focus-within:outline-header " name="productName" onChange={handleChange} value={formData.productName}></input>
@@ -141,7 +141,9 @@ export default function EditProductModal({ modalActive, onChange,product,onEdit 
                             <input type="number" placeholder="Enter Quantity" className="p-3 border border-BoldColor rounded-lg focus-within:outline-2 focus-within:outline-header " name="quantity" onChange={handleChange} value={formData.quantity}></input>
                         </label>
 
-                        <button type="submit" className="text-white h-14" >Edit Product</button>
+                      <div className="flex justify-center">
+                          <button type="submit" className="text-white h-14 font-bold w-50 flex justify-center items-center" >Edit Product</button>
+                      </div>
                     </form>
                 </div>
             </div>

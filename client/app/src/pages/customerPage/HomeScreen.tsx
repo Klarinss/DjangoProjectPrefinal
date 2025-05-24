@@ -58,17 +58,7 @@ export default function HomeScreen() {
 
     return (
         <div className='w-screen h-auto relative '>
-            {/* Video background section */}
-            {/* <div className='fixed top-0 left-0 w-full h-full inset-0 -z-50'>
-    <video
-        className='w-full h-full object-cover'
-        src={blinkVid}
-        muted
-        autoPlay
-        loop
-        playsInline
-    />
-</div> */}
+
             <div className={`fixed top-0 left-0 right-0 z-50 h-20 transition-all duration-300 `}>
                 <div className={`sticky  flex flex-row items-center justify-between  h-20 ${backGround && ' transition-all duration-300 ease-in-out bg-header'}`}>
                     <div className='ml-10 z-10'>
