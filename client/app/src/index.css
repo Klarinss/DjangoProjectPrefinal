@@ -14,6 +14,9 @@
   --color-ModalColor:rgba(0,0,0,0.6);
   --color-RedColor:#FF8383;
   --color-BlueColor:#0D92F4;
+  --color-PinkColor:#F564A9;
+  --color-BlackColor:#000000;
+  --color-BgColor1:rgb(15, 146, 158);
 }
 
 .imageGrid {
@@ -60,14 +63,14 @@ h1 {
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
   font-size: 15px;
   font-weight: 500;
   font-family: inherit;
-  background-color: rgb(122, 202, 210);
+  background-color: rgb(15, 146, 158);
   cursor: pointer;
   transition: border-color 0.25s;
 }

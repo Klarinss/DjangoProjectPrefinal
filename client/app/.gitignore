@@ -22,4 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-client/app/src/assets/video/blink.mp4
+
+# Large media files
+*.mp4
+videos/
+assets/video/
+src/assets/video/
+**/assets/video/blink.mp4

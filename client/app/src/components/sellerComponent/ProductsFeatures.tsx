@@ -81,12 +81,13 @@ export default function ProductsFeatures() {
 
             <div className=" h-full w-full">
                 <div className=" pb-20 flex items-center justify-between">
-                    <h2 className='text-4xl font-medium'>Dashboard</h2>
+                    <h2 className='text-4xl font-medium text-BgColor1'>Dashboard</h2>
+                    <h2>  <h1 className='font-bold text-BgColor1'>Thrift Shop</h1></h2>
                     <div>
                         <button className="text-white" type="submit" onClick={() => setAddProductModal(true)}>Add Product</button>
                     </div>
                 </div>
-                <div className="overflow-x-auto rounded-lg shadow">
+                <div className="overflow-x-auto rounded-lg shadow text-white w-full">
                     <table className="w-full">
                         <thead className="bg-gray-50 border-b">
                             <tr>
@@ -108,18 +109,13 @@ export default function ProductsFeatures() {
                                             alt={product.productName}
                                         />
                                     </td>
-                                    <td className="px-6 py-4 text-sm text-gray-900 text-textColor">{product.productName}</td>
-                                    <td className="px-6 py-4 text-sm text-gray-500 text-textColor">{product.description}</td>
-                                    <td className="px-10 py-4 text-sm text-gray-900 text-textColor">₱{product.price}</td>
-                                    <td className="px-7 py-4 text-sm text-gray-900 text-textColor">{product.quantity}</td>
+                                    <td className="px-6 py-4 text-sm text-gray-900 text-white font-medium">{product.productName}</td>
+                                    <td className="px-6 py-4 text-sm text-gray-500 text-white font-medium">{product.description}</td>
+                                    <td className="px-10 py-4 text-sm text-gray-900 text-white font-medium">₱{product.price}</td>
+                                    <td className="px-7 py-4 text-sm text-gray-900 text-white font-medium">{product.quantity}</td>
                                     <div className="relative pt-10 " >
-                                        <td className="pl-5">
-                                            <HiDotsVertical className="text-2xl cursor-pointer" onClick={() => setActiveProductId(product.id)}></HiDotsVertical>
-
-                                        </td>
-                                        {
-                                            activeProductId === product.id && (
-                                                <div className="bg-white absolute flex flex-col top-2 -left-6 h-24 w-24 justify-evenly items-center rounded-xl">
+                                        <td className="pl-10">
+                                           <div className="absolute flex flex-col top-2 -left-6 h-24 w-24 justify-evenly items-center rounded-xl">
                                                     <MdEdit
                                                         className="text-BlueColor text-3xl cursor-pointer"
                                                         onClick={() => {
@@ -129,8 +125,8 @@ export default function ProductsFeatures() {
                                                     />
                                                     <MdDelete className="text-RedColor text-3xl cursor-pointer" onClick={()=> handleDelete(product.id)} />
                                                 </div>
-                                            )
-                                        }
+                                        </td>
+                                     
                                     </div>
                                 </tr>
                             ))}
