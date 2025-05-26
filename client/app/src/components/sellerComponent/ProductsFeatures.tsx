@@ -79,59 +79,54 @@ export default function ProductsFeatures() {
     return (
         <>
 
-            <div className=" h-full w-full">
-                <div className=" pb-20 flex items-center justify-between">
-                    <h2 className='text-4xl font-medium text-BgColor1'>Dashboard</h2>
-                    <h2>  <h1 className='font-bold text-BgColor1'>Thrift Shop</h1></h2>
-                    <div>
-                        <button className="text-white" type="submit" onClick={() => setAddProductModal(true)}>Add Product</button>
-                    </div>
+            <div className=" h-full w-full flex relative">
+                 <div className='absolute top-0 bottom-0 left-0 right-0  -z-50'>
+            <img className='w-full h-full object-cover' src="../../public/bg/outdoor-hiking-equipment.jpg" alt="" />
+           </div>
+                <div className="bg-white w-56 mr-10">
+                   <div className=" p-5 flex flex-col items-center">
+                    <h2 className=" text-2xl font-bold text-BoldColor">Hello Store</h2>
+                   </div>
+                   <div className="flex items-center flex-col cursor-pointer">
+                     <h2 className=" text-xl font-bold" onClick={()=> setAddProductModal(true)}>Add product</h2>
+                   </div>
                 </div>
-                <div className="overflow-x-auto rounded-lg shadow text-white w-full">
-                    <table className="w-full">
-                        <thead className="bg-gray-50 border-b">
-                            <tr>
-                                <th className="px-6 py-4 text-left text-sm font-medium text-gray-500">Image</th>
-                                <th className="px-6 py-4 text-left text-sm font-medium text-gray-500">Product Name</th>
-                                <th className="px-6 py-4 text-left text-sm font-medium text-gray-500">Description</th>
-                                <th className="px-10 py-4 text-left text-sm font-medium text-gray-500">Price</th>
-                                <th className="px-6 py-4 text-left text-sm font-medium text-gray-500">Quantity</th>
+               <div>
+                 <div className=" pb-20 flex items-center justify-between">
+                   
+                    
+                    
+                </div>
+                <div className=" rounded-lg shadow text-white w-full">
+                   <div className="flex h-auto">
+                    {products.map(product=>
+                         <>
 
-                            </tr>
-                        </thead>
-                        <tbody className="divide-y divide-gray-200 ">
-                            {products.map((product) => (
-                                <tr key={product.id} className="hover:bg-gray-50">
-                                    <td className="px-6 py-4">
-                                        <img
-                                            className="w-20 h-20 object-cover rounded-lg"
-                                            src={`http://127.0.0.1:8000${product.profilePicture}`}
-                                            alt={product.productName}
-                                        />
-                                    </td>
-                                    <td className="px-6 py-4 text-sm text-gray-900 text-white font-medium">{product.productName}</td>
-                                    <td className="px-6 py-4 text-sm text-gray-500 text-white font-medium">{product.description}</td>
-                                    <td className="px-10 py-4 text-sm text-gray-900 text-white font-medium">₱{product.price}</td>
-                                    <td className="px-7 py-4 text-sm text-gray-900 text-white font-medium">{product.quantity}</td>
-                                    <div className="relative pt-10 " >
-                                        <td className="pl-10">
-                                           <div className="absolute flex flex-col top-2 -left-6 h-24 w-24 justify-evenly items-center rounded-xl">
-                                                    <MdEdit
-                                                        className="text-BlueColor text-3xl cursor-pointer"
-                                                        onClick={() => {
-                                                            setSelectedProduct(product);
-                                                            setModal(true);
-                                                        }}
-                                                    />
-                                                    <MdDelete className="text-RedColor text-3xl cursor-pointer" onClick={()=> handleDelete(product.id)} />
-                                                </div>
-                                        </td>
-                                     
-                                    </div>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                      <div className="mr-5 h-auto">
+                          <div className="w-48 h-48 bg-white rounded p-5">
+                            <div className="relative w-full h-full">
+                                 <img className="w-full object-cover h-full rounded" src={`http://127.0.0.1:8000${product.profilePicture}`} alt="" />
+                            </div>
+                           
+                        </div>
+                         <p className="pb-3">{product.productName}</p>
+                        <div className="flex">
+                             <p className="pr-5">{product.description}</p>
+                             <b className="bg-BoldColor p-1 rounded">₱ {product.price}</b>
+                        </div>
+                        <div className="pt-5 flex justify-between">
+                            <MdEdit className="text-BlueColor  text-3xl cursor-pointer" onClick={() => {
+                                setSelectedProduct(product);
+                                setModal(true);
+                            }}></MdEdit>
+                            <MdDelete className=" text-3xl cursor-pointer" onClick={()=> handleDelete(product.id)}></MdDelete>
+                        </div>
+                      </div>
+                         </>
+                        
+                        
+                    )}
+                   </div>
                 </div>
 
                 {
@@ -160,6 +155,7 @@ export default function ProductsFeatures() {
                         </div>
                     </div>
                 }
+               </div>
 
             </div>
         </>

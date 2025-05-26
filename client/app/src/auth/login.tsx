@@ -65,13 +65,13 @@ const Login: React.FC = () => {
     return (
         <div className="  h-screen w-screen flex items-center justify-evenly bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 relative flex-col ">
            <div className='absolute top-0 bottom-0 left-0 right-0 '>
-            <img className='w-full h-full object-cover' src="../../public/bg/gear-5-monkey-d-3840x2160-17522.jpg" alt="" />
+            <img className='w-full h-full object-cover' src="../../public/bg/outdoor-hiking-equipment.jpg" alt="" />
            </div>
            <h1 className='font-bold text-BgColor1'>Thrift Shop</h1>
             <div className="max-w-md w-full space-y-8 z-10">
                 <div>
                     <h2 className="mt-6 text-center text-3xl font-extrabold text-BgColor1">
-                        Sign in
+                        Sign in to your Account
                     </h2>
                 </div>
                 <form className="mt-8 space-y-6 z-10" onSubmit={handleSubmit}>

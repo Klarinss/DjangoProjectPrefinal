@@ -61,9 +61,9 @@ export default function EditProductModal({ modalActive, onChange,product,onEdit 
     }
     return (
         <>
-            <div className="flex  rounded-2xl items-center bg-white text-textColor pt-5 pb-10 w-2xl flex-col ">
-                <div className=" pr-5 flex justify-between w-full pb-10 pl-5">
-                  <h2 className=" font-medium text-4xl text-ModalColor flex justify-center items-center pl-50">Edit Product </h2>
+            <div className="flex  rounded-2xl items-center bg-white text-textColor pt-5 pb-10 w-full h-full flex-col ">
+                <div className=" pr-5 flex justify-end w-full pb-10 pl-5">
+                 
                     <IoClose className="text-4xl cursor-pointer" onClick={onChange} />
                 </div>
                 <div className="h-full w-full" >
@@ -100,6 +100,7 @@ export default function EditProductModal({ modalActive, onChange,product,onEdit 
                                                 onChange={handleImageChange}
                                                 accept="image/*"
                                                 className="hidden"
+                                                
                                                 id="image-upload"
                                                 name="profilePicture"
                                             />
@@ -130,16 +131,18 @@ export default function EditProductModal({ modalActive, onChange,product,onEdit 
                             <input type="number" placeholder="Enter Price" className="p-3 border border-BoldColor rounded-lg focus-within:outline-2 focus-within:outline-header" name="price" onChange={handleChange} value={formData.price}></input>
                         </label>
                        </div>
-
-                        <label className="flex flex-col">
+<div className="flex  justify-evenly  pt-5 pb-5 items-center">
+    
+                        <label className="flex flex-col w-64">
                             Description:
                             <textarea placeholder="Enter Description" className=" p-3 pt-10 pb-10 border border-BoldColor rounded-lg focus-within:outline-2 focus-within:outline-header" name="description" onChange={handleChange} value={formData.description}></textarea>
                         </label>
 
-                        <label className="flex flex-col pb-10">
+                        <label className="flex flex-col pb-10 ">
                             Quantity:
                             <input type="number" placeholder="Enter Quantity" className="p-3 border border-BoldColor rounded-lg focus-within:outline-2 focus-within:outline-header " name="quantity" onChange={handleChange} value={formData.quantity}></input>
                         </label>
+</div>
 
                       <div className="flex justify-center">
                           <button type="submit" className="text-white h-14 font-bold w-50 flex justify-center items-center" >Edit Product</button>
