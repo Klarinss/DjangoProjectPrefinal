@@ -19,7 +19,7 @@ export default function SellerDashboard() {
                 <div className='text-header flex  w-screen h-screen '>
                    
                     <div className='w-screen h-screen  absolute bottom-0 top-0 border-0 left-0 right-0 '>
-                         <div className='inset-0 p-10  h-full w-full flex  relative '>
+                         <div className='inset-0   h-full w-full flex  relative '>
                             <ProductsFeatures></ProductsFeatures>
                          </div>
                     </div>
